@@ -1,0 +1,24 @@
+PODS:
+  - APIKit (3.2.1):
+    - Result (~> 3.0)
+  - Himotoki (3.2.0)
+  - Result (3.2.4)
+
+DEPENDENCIES:
+  - APIKit (~> 3.1)
+  - Himotoki (~> 3.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - APIKit
+    - Himotoki
+    - Result
+
+SPEC CHECKSUMS:
+  APIKit: a39ff72ac44efc15513fd1b98800f63c525be61b
+  Himotoki: 2618fc6b939ad6d9b71c52c90fe210f54ea28167
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+
+PODFILE CHECKSUM: 74b7109333b2aa673a58e6af97f57a305fcc5c1c
+
+COCOAPODS: 1.5.3
