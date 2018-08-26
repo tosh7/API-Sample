@@ -29,4 +29,8 @@ struct  FetchRepositoryRequest: GitHubRequest {
     var method: HTTPMethod {
         return .get
     }
+    
+    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> FetchRepositoryRequest.Response {
+        return [object]
+    }
 }

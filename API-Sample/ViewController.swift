@@ -15,17 +15,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        Session.send(){ result in
-            swtich result {
+        Session.send(FetchRepositoryRequest(userName: "sasao")){ result in
+            switch result {
                 case .success(let res):
-                    pritnt("成功\(res)")
-                case .faiure(let err):
+                    print("成功\(res)")
+                case .failure(let err):
                     print("失敗\(err)")
             }
-            
         }
     }
-
-
 }
 
