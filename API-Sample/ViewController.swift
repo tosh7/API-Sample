@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        Session.send(FetchRepositoryRequest(userName: "sasao")){ result in
+        Session.send(FetchRepositoryRequest(userName: "tosh7")){ result in
             switch result {
                 case .success(let res):
                     print("成功\(res)")
@@ -25,4 +25,3 @@ class ViewController: UIViewController {
         }
     }
 }
-
