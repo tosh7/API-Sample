@@ -9,7 +9,24 @@
 import Foundation
 import APIKit
 
-final class Request{
-     private init(){}
+protocol GitHubRequest: Request {
+}
+
+extension GitHubRequest {
+    var baseURL: URL {
+        return URL(string: "https://api.github.com")!
+    }
+}
+
+struct  FetchRepositoryRequest: GitHubRequest {
+    var userName: String
+    var path: String {
+        return "/users/\(userName)/repos"
+    }
     
+    typealias Response = [Any]
+    
+    var method: HTTPMethod {
+        return .get
+    }
 }

@@ -7,17 +7,23 @@
 //
 
 import UIKit
+import APIKit
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        Session.send(){ result in
+            swtich result {
+                case .success(let res):
+                    pritnt("成功\(res)")
+                case .faiure(let err):
+                    print("失敗\(err)")
+            }
+            
+        }
     }
 
 
